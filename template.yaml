@@ -1,0 +1,7 @@
+S3Bucket:
+  Type: AWS::S3::Bucket
+  DeletionPolicy: Delete
+    Properties:
+      BucketName: !Sub 
+        - "${tmp}-${AWS::Region}-${AWS::AccountId}-plain"
+        - { tmp: !Select [0, !Split [".", !Ref DomainName]] }
