@@ -3,5 +3,5 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
-      Properties:
-        BucketName: !Sub moussypad-${AWS::Region}-${AWS::AccountId}-plain
+    Properties:
+      BucketName: !Sub moussypad-${AWS::Region}-${AWS::AccountId}-plain
