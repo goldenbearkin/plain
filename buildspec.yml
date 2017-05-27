@@ -16,14 +16,14 @@ env:
     commands:
       # - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template post-$TEMPLATE.yaml
       - ./test-script.sh
-      - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template post-$TEMPLATE.yaml
+      - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template post-${TEMPLATE}.yaml
   # post_build:
   #   commands:
   #     - command
   #     - command
 artifacts:
   files:
-    - post-$TEMPLATE.yaml
+    - post-${TEMPLATE}.yaml
     # - location
   # discard-paths: yes
   # base-directory: location
