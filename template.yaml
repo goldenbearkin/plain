@@ -1,7 +1,10 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Resources:
-  S3Bucket:
-    Type: AWS::S3::Bucket
-    DeletionPolicy: Delete
+  S3BucketStack:
+    Type: AWS::CloudFormation::Stack
     Properties:
-      BucketName: !Sub moussypad-${AWS::Region}-${AWS::AccountId}-plain
+      # Parameters:
+        TemplateURL: ./
+      #   DomainName: !Ref DomainName
+      # TemplateURL: !Sub https://s3-${AWS::Region}.amazonaws.com/toolings/pipelines/infrastructure/service-roles.yaml
+  
