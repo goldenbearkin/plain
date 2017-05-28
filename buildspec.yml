@@ -20,8 +20,8 @@ phases:
   #     - command
 artifacts:
   files:
-    - post-template.yaml
-    # - post-${TEMPLATE}
+    # - post-template.yaml
+    - post-${TEMPLATE}
     # - location
   # discard-paths: yes
   # base-directory: location
