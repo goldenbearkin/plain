@@ -18,7 +18,7 @@ phases:
       # - ./test-script.sh
       - POST_TEMPLATE=post-${TEMPLATE}
       - echo $POST_TEMPLATE
-      - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template $POST_TEMPLATE --kms-key-id 'aws/s3'
+      - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template $POST_TEMPLATE --kms-key-id 'e163a727-71b7-4da7-bfdc-6e542b71fbbe'
   # post_build:
   #   commands:
   #     - command
