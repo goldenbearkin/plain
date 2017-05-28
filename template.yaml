@@ -4,7 +4,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Properties:
       # Parameters:
-      TemplateURL: ./
+      TemplateURL: s3.yaml
       #   DomainName: !Ref DomainName
       # TemplateURL: !Sub https://s3-${AWS::Region}.amazonaws.com/toolings/pipelines/infrastructure/service-roles.yaml
   
