@@ -16,7 +16,7 @@ phases:
     commands:
       # - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template post-$TEMPLATE.yaml
       # - ./test-script.sh
-      - POST_TEMPLATE=${TEMPLATE}.yaml
+      - POST_TEMPLATE=post-${TEMPLATE}
       - echo $POST_TEMPLATE
       - aws cloudformation package --template $TEMPLATE --s3-bucket $S3_BUCKET_FOR_ARTIFACT --output-template $POST_TEMPLATE
   # post_build:
