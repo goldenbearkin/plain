@@ -4,9 +4,9 @@ env:
     S3_BUCKET_FOR_ARTIFACT: ""
     TEMPLATE: ""
 phases:
-#   install:
-#     commands:
-#       - command
+  install:
+    commands:
+      - pip install --upgrade awscli
 #       - command
   pre_build:
     commands:
