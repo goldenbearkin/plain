@@ -1,7 +1,10 @@
 AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  S3Name:
+    Type: String
 Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
     Properties:
-      BucketName: !Sub moussypad-${AWS::Region}-${AWS::AccountId}-plain
+      BucketName: !Sub moussypad-${AWS::Region}-${S3Name}-plain

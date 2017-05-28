@@ -1,9 +1,13 @@
 AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  S3Name:
+    Type: String
 Resources:
   S3BucketStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      # Parameters:
+      Parameters:
+        S3Name: !Ref S3Name
       TemplateURL: s3.yaml
       #   DomainName: !Ref DomainName
       # TemplateURL: !Sub https://s3-${AWS::Region}.amazonaws.com/toolings/pipelines/infrastructure/service-roles.yaml

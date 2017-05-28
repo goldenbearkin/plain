@@ -7,7 +7,6 @@ phases:
   install:
     commands:
       - pip install --upgrade awscli
-#       - command
   pre_build:
     commands:
       - sh ./test-script.sh
